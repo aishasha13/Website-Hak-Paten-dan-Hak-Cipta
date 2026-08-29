@@ -15,7 +15,7 @@ class AuthController extends Controller
         if (!Storage::exists($this->credFile)) {
             $default = [
                 'username' => 'admin',
-                'password_hash' => Hash::make('admin12345'),
+                'password_hash' => Hash::make('password'),
                 'updated_at' => now()->toDateTimeString(),
             ];
             Storage::put($this->credFile, json_encode($default, JSON_PRETTY_PRINT));
